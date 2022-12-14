@@ -1,0 +1,132 @@
+@font-face 
+    font-family: Stolzl
+    src: url('../fonts/Stolzl-Bold.ttf')
+    font-weight: bold
+    font-style: normal
+
+@font-face 
+    font-family: Stolzl
+    src: url('../fonts/Stolzl-Light.ttf')
+    font-weight: light
+    font-style: normal
+
+@font-face 
+    font-family: Stolzl
+    src: url('../fonts/Stolzl-Regular.ttf')
+    font-weight: regular
+    font-style: normal
+
+$color-gold: #e2c087
+$color-black: #202020
+$color-white: #ffffff
+$color-gray: #ffffff8c
+
+body
+    font-family: Stolzl
+
+html
+    background-image: url(01.jpg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-attachment: fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+.navbar
+    padding: 0
+    display: flex
+    justify-content: center
+
+.gold
+    color: $color-gold
+
+.container-fluid
+    background: $color-black
+    .navbar-brand
+        margin-right: 1rem
+        .text_info
+            font-size: 13px
+            color: $color-gray
+            font-weight: light
+    .logo
+        width: 50px
+
+.nav-link:hover
+    color: $color-gold
+
+.dropdown-menu
+    background: $color-white
+    color: $color-gray
+    
+.dropdown-item:active
+    background: $color-gray
+    color: $color-gray
+
+.dropdown-item:hover
+    background: $color-gold
+
+.wrapper-contacts
+    background: $color-black
+    text-align: center
+    display: flex
+    flex-direction: column
+    .tel_num
+        color: $color-gray
+        text-decoration: none
+    .tel_num:hover
+        color: $color-gold
+        text-decoration: underline
+    .tel_icon
+        color: $color-gold
+
+.icons
+    display: inline-flex
+    justify-content: center
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 30px
+        height: 30px
+        background-color: $color-black
+        border: 1px solid $color-gold
+        border-radius: 100px
+        margin-right: 17px
+        &:last-child
+            margin-right: 0px
+        i
+            font-size: 16px
+            color: $color-gold
+
+.container
+    width: 1140px
+    margin: 0 auto
+    position: relative
+
+@media (max-width: 1199.98px)
+    .container
+        width: 960px
+
+@media (max-width: 991.98px)
+    .container
+        width: 720px
+
+@media (max-width: 767.98px)
+    .container
+        width: 540px
+    .navbar-brand
+        font-size: 16px
+    .text_info
+        display: none
+    .tel_num
+        font-size: 14px
+    p
+        width: 200px
+    .wrapper-contacts__icons-box
+        display: none
+
+@media (max-width: 575.98px)
+    .container
+        width: 100%

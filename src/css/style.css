@@ -1,0 +1,155 @@
+@font-face {
+  font-family: Stolzl;
+  src: url("../fonts/Stolzl-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Stolzl;
+  src: url("../fonts/Stolzl-Light.ttf");
+  font-weight: light;
+  font-style: normal;
+}
+@font-face {
+  font-family: Stolzl;
+  src: url("../fonts/Stolzl-Regular.ttf");
+  font-weight: regular;
+  font-style: normal;
+}
+body {
+  font-family: Stolzl;
+}
+
+html {
+  background-image: url(01.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.gold {
+  color: #e2c087;
+}
+
+.container-fluid {
+  background: #202020;
+}
+.container-fluid .navbar-brand {
+  margin-right: 1rem;
+}
+.container-fluid .navbar-brand .text_info {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5490196078);
+  font-weight: light;
+}
+.container-fluid .logo {
+  width: 50px;
+}
+
+.nav-link:hover {
+  color: #e2c087;
+}
+
+.dropdown-menu {
+  background: #ffffff;
+  color: rgba(255, 255, 255, 0.5490196078);
+}
+
+.dropdown-item:active {
+  background: rgba(255, 255, 255, 0.5490196078);
+  color: rgba(255, 255, 255, 0.5490196078);
+}
+
+.dropdown-item:hover {
+  background: #e2c087;
+}
+
+.wrapper-contacts {
+  background: #202020;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper-contacts .tel_num {
+  color: rgba(255, 255, 255, 0.5490196078);
+  text-decoration: none;
+}
+.wrapper-contacts .tel_num:hover {
+  color: #e2c087;
+  text-decoration: underline;
+}
+.wrapper-contacts .tel_icon {
+  color: #e2c087;
+}
+
+.icons {
+  display: inline-flex;
+  justify-content: center;
+}
+.icons__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #202020;
+  border: 1px solid #e2c087;
+  border-radius: 100px;
+  margin-right: 17px;
+}
+.icons__item:last-child {
+  margin-right: 0px;
+}
+.icons__item i {
+  font-size: 16px;
+  color: #e2c087;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 1199.98px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    width: 540px;
+  }
+  .navbar-brand {
+    font-size: 16px;
+  }
+  .text_info {
+    display: none;
+  }
+  .tel_num {
+    font-size: 14px;
+  }
+  p {
+    width: 200px;
+  }
+  .wrapper-contacts__icons-box {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .container {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
