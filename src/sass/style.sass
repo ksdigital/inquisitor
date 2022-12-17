@@ -24,15 +24,8 @@ $color-gray: #ffffff8c
 body
     font-family: Stolzl
 
-html
-    background-image: url(01.jpg)
-    background-repeat: no-repeat
-    background-position: center center
-    background-attachment: fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+.main-header
+    padding: 0
 
 .navbar
     padding: 0
@@ -42,8 +35,10 @@ html
 .gold
     color: $color-gold
 
-.container-fluid
+.navbar_content
     background: $color-black
+    display: flex
+    justify-content: space-between
     .navbar-brand
         margin-right: 1rem
         .text_info
@@ -100,33 +95,43 @@ html
             font-size: 16px
             color: $color-gold
 
-.container
-    width: 1140px
-    margin: 0 auto
-    position: relative
+// .container
+//     width: 1140px
+//     margin: 0 auto
+//     position: relative
+//     padding: 0
 
-@media (max-width: 1199.98px)
-    .container
-        width: 960px
+// @media (max-width: 1199.98px)
+//     .container
+//         width: 960px
 
-@media (max-width: 991.98px)
-    .container
-        width: 720px
+// @media (max-width: 991.98px)
+//     .container
+//         width: 720px
 
 @media (max-width: 767.98px)
-    .container
-        width: 540px
-    .navbar-brand
-        font-size: 16px
+    .name
+        font-size: 1rem
+        .name_1, .name_2
+            display: block
     .text_info
         display: none
     .tel_num
         font-size: 14px
-    p
-        width: 200px
     .wrapper-contacts__icons-box
         display: none
 
-@media (max-width: 575.98px)
-    .container
-        width: 100%
+// // @media (max-width: 767.98px)
+// //     .container
+// //         width: 100%
+
+// @media (max-width: 575.98px)
+//     .container
+//         width: 100%
+
+
+@media (max-width: 425px)
+    .name
+        display: flexbox
+        .name_1, .name_2
+            display: block
