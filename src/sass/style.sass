@@ -1,3 +1,17 @@
+.noselect
+    outline: none !important
+    border: none !important
+    -webkit-touch-callout: none /* iOS Safari */
+    -webkit-user-select: none /* Safari */
+    -khtml-user-select: none /* Konqueror HTML */
+    -moz-user-select: none /* Old versions of Firefox */
+    -ms-user-select: none /* Internet Explorer/Edge */
+    user-select: none /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    *:focus
+        outline: 0
+        outline: none
+
+
 @font-face 
     font-family: Stolzl
     src: url('../fonts/Stolzl-Bold.ttf')
@@ -41,6 +55,7 @@ body
     justify-content: space-between
     .name
         margin-right: 1rem
+        white-space: normal
         .name_info
             font-size: 13px
             color: $color-gray
@@ -65,6 +80,7 @@ body
 .wrapper-contacts
     background: $color-black
     text-align: center
+    vertical-align: middle
     display: flex
     flex-direction: column
     .tel_num
@@ -95,43 +111,65 @@ body
             font-size: 16px
             color: $color-gold
 
-// .container
-//     width: 1140px
-//     margin: 0 auto
-//     position: relative
-//     padding: 0
-
-// @media (max-width: 1199.98px)
-//     .container
-//         width: 960px
-
-// @media (max-width: 991.98px)
-//     .container
-//         width: 720px
-
 @media (max-width: 767.98px)
+    .navbar_burger
+        margin-right: .4rem
     .name
+        margin-top: 1rem
         font-size: 1rem
         .name_1, .name_2
             display: block
     .name_info
         display: none
     .tel_num
-        font-size: 14px
+        font-size: .80rem
     .wrapper-contacts__icons-box
         display: none
 
-// // @media (max-width: 767.98px)
-// //     .container
-// //         width: 100%
-
-// @media (max-width: 575.98px)
-//     .container
-//         width: 100%
-
-
-@media (max-width: 425px)
+@media (max-width: 575.98px)
+    .navbar_burger
+        margin-right: .4rem
+    .navbar_content
+        padding: 0
     .name
-        display: flexbox
+        margin-top: 1rem
+        font-size: 1rem
+        padding: 0
         .name_1, .name_2
             display: block
+    .name_info
+        display: none
+    .tel_num
+        font-size: .80rem
+
+@media (max-width: 487px)
+    .navbar_burger
+        margin-right: .4rem
+    .name
+        font-size: .75rem
+        .name_1, .name_2
+            display: block
+    .tel_num
+        font-size: .65rem
+    .tel_icon
+        font-size: .5rem
+
+@media (max-width: 375px)
+    .navbar_burger
+        margin-right: .4rem
+    .navbar
+        display: flex
+        flex-wrap: nowrap
+        justify-content: flex-start
+    .logo
+        width: 40px
+    .name
+        width: 90px
+        margin-top: .5rem
+        font-size: .8rem
+        .name_1, .name_2
+            display: block
+    .tel_num
+        font-size: .65rem
+    .tel_icon
+        font-size: .5rem

@@ -1,3 +1,17 @@
+.noselect {
+  outline: none !important;
+  border: none !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.noselect *:focus {
+  outline: 0;
+  outline: none;
+}
+
 @font-face {
   font-family: Stolzl;
   src: url("../fonts/Stolzl-Bold.ttf");
@@ -41,6 +55,7 @@ body {
 }
 .navbar_content .name {
   margin-right: 1rem;
+  white-space: normal;
 }
 .navbar_content .name .name_info {
   font-size: 13px;
@@ -72,6 +87,7 @@ body {
 .wrapper-contacts {
   background: #202020;
   text-align: center;
+  vertical-align: middle;
   display: flex;
   flex-direction: column;
 }
@@ -111,7 +127,11 @@ body {
 }
 
 @media (max-width: 767.98px) {
+  .navbar_burger {
+    margin-right: 0.4rem;
+  }
   .name {
+    margin-top: 1rem;
     font-size: 1rem;
   }
   .name .name_1, .name .name_2 {
@@ -121,17 +141,75 @@ body {
     display: none;
   }
   .tel_num {
-    font-size: 14px;
+    font-size: 0.8rem;
   }
   .wrapper-contacts__icons-box {
     display: none;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 575.98px) {
+  .navbar_burger {
+    margin-right: 0.4rem;
+  }
+  .navbar_content {
+    padding: 0;
+  }
   .name {
-    display: flexbox;
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0;
   }
   .name .name_1, .name .name_2 {
     display: block;
+  }
+  .name_info {
+    display: none;
+  }
+  .tel_num {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 487px) {
+  .navbar_burger {
+    margin-right: 0.4rem;
+  }
+  .name {
+    font-size: 0.75rem;
+  }
+  .name .name_1, .name .name_2 {
+    display: block;
+  }
+  .tel_num {
+    font-size: 0.65rem;
+  }
+  .tel_icon {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .navbar_burger {
+    margin-right: 0.4rem;
+  }
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .logo {
+    width: 40px;
+  }
+  .name {
+    width: 90px;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .name .name_1, .name .name_2 {
+    display: block;
+  }
+  .tel_num {
+    font-size: 0.65rem;
+  }
+  .tel_icon {
+    font-size: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
