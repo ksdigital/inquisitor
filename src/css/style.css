@@ -20,8 +20,12 @@ body {
   font-family: Stolzl;
 }
 
-.main-header {
+.container {
   padding: 0;
+}
+
+.gold {
+  color: #e2c087;
 }
 
 .navbar {
@@ -30,19 +34,15 @@ body {
   justify-content: center;
 }
 
-.gold {
-  color: #e2c087;
-}
-
 .navbar_content {
   background: #202020;
   display: flex;
   justify-content: space-between;
 }
-.navbar_content .navbar-brand {
+.navbar_content .name {
   margin-right: 1rem;
 }
-.navbar_content .navbar-brand .text_info {
+.navbar_content .name .name_info {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.5490196078);
   font-weight: light;
@@ -117,7 +117,7 @@ body {
   .name .name_1, .name .name_2 {
     display: block;
   }
-  .text_info {
+  .name_info {
     display: none;
   }
   .tel_num {
