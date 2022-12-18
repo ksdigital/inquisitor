@@ -36,7 +36,7 @@
 
 .main-text {
   font-size: 1rem;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5490196078);
   font-weight: regular;
 }
 
@@ -138,7 +138,7 @@ body {
 }
 
 .article {
-  height: 500px;
+  height: 480px;
 }
 
 .article_bg {
@@ -147,10 +147,29 @@ body {
 }
 
 h1 {
+  width: 60%;
   font-size: 48px;
   font-weight: bold;
   color: #ffffff;
-  padding: 4rem 0 0 1rem;
+  padding: 2.5rem 0 0 1rem;
+}
+
+.article-text {
+  width: 50%;
+}
+
+.main_btn {
+  background-color: #e2c087;
+  color: #040404;
+  border-radius: 15px;
+}
+
+.main_btn:hover {
+  box-shadow: 0 0 5px 5px rgba(226, 192, 135, 0.45);
+}
+
+.main-item {
+  width: 60%;
 }
 
 @media (max-width: 767.98px) {
@@ -231,7 +250,7 @@ h1 {
   }
   .navbar {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
   }
   .logo {
