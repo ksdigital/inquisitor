@@ -34,6 +34,12 @@
   color: #e2c087;
 }
 
+.main-text {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: regular;
+}
+
 body {
   font-family: Stolzl;
   background: url(../img/17.jpg) center/cover no-repeat;
