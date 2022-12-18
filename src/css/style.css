@@ -34,6 +34,10 @@
   color: #e2c087;
 }
 
+.white {
+  color: #ffffff;
+}
+
 .main-text {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.5490196078);
@@ -168,8 +172,12 @@ h1 {
   box-shadow: 0 0 5px 5px rgba(226, 192, 135, 0.45);
 }
 
-.main-item {
+.main-items {
   width: 60%;
+}
+
+.item-text {
+  font-size: 14px;
 }
 
 @media (max-width: 767.98px) {
