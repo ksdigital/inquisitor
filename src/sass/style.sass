@@ -53,7 +53,7 @@ body
     padding: 0
 
 .main-header
-    margin-bottom: 80px
+    margin-bottom: 4.4rem
 
 .navbar
     padding: 0
@@ -119,39 +119,73 @@ body
         &:last-child
             margin-right: 0px
         i
-            font-size: 16px
+            font-size: 1rem
             color: $color-gold
 
-.article
-    height: 480px
+.article_content
+    height: 500px
+    // overflow: hidden
+    margin-bottom: 4.4rem
 
-.article_bg
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)), url(../img/main1.jpg) left/cover no-repeat
+.article_content_bg
+    background: linear-gradient(rgba(04, 04, 04, 0.7), rgba(04, 04, 04, 0.9)), url(../img/main1.jpg) left/cover no-repeat
     position: relative
 
-h1
-    width: 60%
-    font-size: 48px
+.title
+    font-size: 3rem
     font-weight: bold
     color: $color-white
-    padding: 2.5rem 0 0 1rem
+    padding: 1rem 0 0 1rem
+    margin-bottom: 2rem
 
-.article-text
-    width: 50%
+h1
+    width: 70%
+
+.article_content-text
+    width: 60%
 
 .main_btn
     background-color: $color-gold
     color: $color-black
     border-radius: 15px
+    margin-bottom: 4rem
 
 .main_btn:hover
     box-shadow: 0 0 5px 5px rgba($color-gold, .45)
 
-.main-items
-    width: 60%
-
 .item-text
-    font-size: 14px
+    font-size: 1rem
+
+.item
+    i
+        font-size: 2rem
+        font-weight: light
+
+.first_section
+    // height: 500px
+    // overflow: hidden
+    margin-bottom: 4.4rem
+
+.left_wrapper
+    text-align: justify
+
+.right_wrapper
+    .item
+        display: flex
+        align-items: center
+    span
+        font-size: 3rem
+    p
+        margin-bottom: .8rem
+    i
+        font-size: 2.5rem
+
+.title_2
+    font-size: 2rem
+    font-weight: light
+    color: $color-gray
+    text-align: center
+    margin: 0
 
 @media (max-width: 767.98px)
     .main-header
