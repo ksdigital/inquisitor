@@ -143,11 +143,10 @@ body {
 
 .article_content {
   height: 500px;
-  margin-bottom: 4.4rem;
 }
 
 .article_content_bg {
-  background: linear-gradient(rgba(4, 4, 4, 0.7), rgba(4, 4, 4, 0.9)), url(../img/main.jpg) left/cover no-repeat;
+  background: linear-gradient(rgba(4, 4, 4, 0.6), rgba(4, 4, 4, 0.8)), url(../img/main.jpg) left/cover no-repeat;
   position: relative;
 }
 
@@ -186,7 +185,7 @@ h1 {
   font-weight: light;
 }
 
-.first_section {
+.article_content, .first_section, .second_section, .third_section, .fourth_section {
   margin-bottom: 4.4rem;
 }
 
@@ -216,23 +215,22 @@ h1 {
   margin: 0;
 }
 
-.title_3 {
-  width: 50%;
-}
-
 .second_section-title {
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
 }
 
 .btn-group .btn {
   color: #040404;
   background: #e2c087;
+  border-radius: 10px;
 }
 .btn-group .btn-3 {
   margin: auto;
 }
 .btn-group .btn:hover {
   box-shadow: 0 0 5px 5px rgba(226, 192, 135, 0.45);
+  transition: all 0.3s;
+  background: #4d5154;
 }
 
 .card {
@@ -241,8 +239,10 @@ h1 {
   border: 1px solid;
   position: relative;
   z-index: 1;
-  transition: 0.6s;
+  transition: all 0.8s;
   height: 100%;
+  border-radius: 10px;
+  padding-bottom: 1rem;
 }
 .card .card-title {
   color: rgba(255, 255, 255, 0.5490196078);
@@ -263,6 +263,7 @@ h1 {
   color: #040404;
   text-decoration: none;
   margin-bottom: 1rem;
+  visibility: hidden;
 }
 .card .serv-link:hover {
   color: #ffffff;
@@ -298,6 +299,26 @@ h1 {
 
 .card:hover .card-title {
   color: #ffffff;
+}
+.card:hover .serv-link {
+  visibility: visible;
+}
+
+#cards-2, #cards-3 {
+  display: none;
+}
+
+.third_section .main-text {
+  text-align: justify;
+}
+.third_section .lic-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.third_section .lic-link:hover {
+  color: #e2c087;
+  text-decoration: underline;
 }
 
 @media (max-width: 767.98px) {

@@ -88,7 +88,7 @@
                             <a class="nav-link" href="#">Контакты</a>
                         </li>
                         <li class="nav-item me-lg-3">
-                            <a class="nav-link" href="#">Лицензии</a>
+                            <a class="nav-link" href="#license">Лицензии</a>
                         </li>
                     </ul>
                 </div>
@@ -158,22 +158,22 @@
                 </div>
             </section>
             <section class="second_section container">
-                <div class="second_section-title d-flex flex-row container">
+                <div class="second_section-title d-flex flex-column container p-3">
                     <h2 class="title title_3" id="about-us">Наши услуги
                     </h2>
-                    <div class="button_group d-flex justify-content-center align-items-center">
+                    <div class="button_group d-flex justify-content-start align-items-center">
                         <div class="btn-group d-flex" role="group" aria-label="Базовая группа переключателей радио">
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked onclick="individuals()">
                             <label class="btn btn-dark" for="btnradio1">Для физических лиц</label>
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="legal()">
                             <label class="btn btn-dark" for="btnradio2">Для юридических лиц</label>
-                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="other()">
                             <label class="btn btn-dark d-flex" for="btnradio3"> <div class="btn-3">Прочие</div> </label>
                         </div>
                     </div>
                 </div>
-                <div class="second_section_cards container">
-                    <div class="card-group row g-lg-4 g-sm-2">
+                <div class="second_section_cards container p-3">
+                    <div class="card-group row g-lg-4 g-sm-4" id="cards-1">
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="card">
                                 <div class="card-header card-title">Cбор сведений по гражданским делам
@@ -307,6 +307,92 @@
                             </div>
                         </div>
                     </div>
+                    <div class="card-group row g-lg-4 g-sm-4 justify-content-center" id="cards-2">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-header card-title">Сбор данных и информации
+                                </div>
+                                <div class="card-text main-text">от 25 000 руб.</div>
+                                <a href="#" class="serv-link">Подробнее...</a>
+                                <div class="card-footer">
+                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-header card-title">Проверка контрагентов
+                                </div>
+                                <div class="card-text main-text">цена договорная</div>
+                                <a href="#" class="serv-link">Подробнее...</a>
+                                <div class="card-footer">
+                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-group row g-lg-4 g-sm-4" id="cards-3">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-header card-title">Проверка объекта недвижимости
+                                </div>
+                                <div class="card-text main-text">от 5 000 руб.</div>
+                                <a href="#" class="serv-link">Подробнее...</a>
+                                <div class="card-footer">
+                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-header card-title">Юридическая консультация
+                                </div>
+                                <div class="card-text main-text">цена договорная</div>
+                                <a href="#" class="serv-link">Подробнее...</a>
+                                <div class="card-footer">
+                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-header card-title">Физическое сопровождение имущества и лиц
+                                </div>
+                                <div class="card-text main-text">цена договорная</div>
+                                <a href="#" class="serv-link">Подробнее...</a>
+                                <div class="card-footer">
+                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-header card-title">Иные услуги
+                                </div>
+                                <div class="card-text main-text">запишитесь <br> на консультацию</div>
+                                <a href="#" class="serv-link invisible">Подробнее...</a>
+                                <div class="card-footer">
+                                    <button type="button" class="button btn btn-dark btn-sm">Записаться</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="third_section container">
+                <h2 class="title" id="license">
+                    Лицензии
+                </h2>
+                <p class="main-text p-3">
+                    <span class="white">Лицензия</span> на частную детективную деятельность <span class="gold"> Л055-00106-67/00586287</span> предоставлена на основании приказа <span class="gold">№ 214/9-334 от 20.07.2022</span>  Управлением Федеральной службы войск национальной гвардии РФ по Смоленской области.   <a href="#" class="lic-link">(Подробнее...)</a>
+                </p>
+            </section>
+            <section class="fourth_section container">
+                <h2 class="title" id="connection">
+                    Связаться с детективом
+                </h2>
+                <div>
+                    
                 </div>
             </section>
         </article>
@@ -314,4 +400,6 @@
     </main>
 </body>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
 </html>
