@@ -222,7 +222,7 @@ h1
         margin-bottom: 1rem
         color: $color-gold
     .serv-link
-        color: $color-black
+        color: $color-gray
         text-decoration: none
         margin-bottom: 1rem
         visibility: hidden
@@ -236,9 +236,10 @@ h1
             border-radius: 7px
 
 .card::after
-    background: linear-gradient(45deg, $color-gray, $color-black)
-    box-shadow: 0 0 5px 5px rgba($color-gold, .45)
+    // background: linear-gradient(45deg, $color-gray, $color-black)
+    // box-shadow: 0 0 5px 5px rgba($color-gold, .45)
     color: $color-black
+    border: 1px solid $color-gold
     border-radius: 10px
     content: ""
     position: absolute
@@ -255,6 +256,7 @@ h1
     .card-title
         color: $color-white
     .serv-link
+        // color: $color-gray
         visibility: visible
 
 #cards-2, #cards-3

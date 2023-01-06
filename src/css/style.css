@@ -260,7 +260,7 @@ h1 {
   color: #e2c087;
 }
 .card .serv-link {
-  color: #040404;
+  color: rgba(255, 255, 255, 0.5490196078);
   text-decoration: none;
   margin-bottom: 1rem;
   visibility: hidden;
@@ -278,9 +278,8 @@ h1 {
 }
 
 .card::after {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5490196078), #040404);
-  box-shadow: 0 0 5px 5px rgba(226, 192, 135, 0.45);
   color: #040404;
+  border: 1px solid #e2c087;
   border-radius: 10px;
   content: "";
   position: absolute;
