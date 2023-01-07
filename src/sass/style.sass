@@ -124,7 +124,6 @@ body
 
 .article_content
     height: 500px
-    // overflow: hidden
 
 .article_content_bg
     background: linear-gradient(rgba(04, 04, 04, 0.6), rgba(04, 04, 04, 0.8)), url(../img/main.jpg) left/cover no-repeat
@@ -147,6 +146,7 @@ h1
     background-color: $color-gold
     color: $color-black
     border-radius: 15px
+    transition: all 0.3s
 
 .button:hover
     box-shadow: 0 0 5px 5px rgba($color-gold, .45)
@@ -175,12 +175,14 @@ h1
         margin-bottom: .8rem
     i
         font-size: 2.5rem
+    img
+        width: 3.5rem
 
 .title_2
     font-size: 2rem
     font-weight: light
     color: $color-gray
-    text-align: center
+    text-align: start
     margin: 0
 
 .second_section-title
@@ -239,7 +241,7 @@ h1
     // background: linear-gradient(45deg, $color-gray, $color-black)
     // box-shadow: 0 0 5px 5px rgba($color-gold, .45)
     color: $color-black
-    border: 1px solid $color-gold
+    box-shadow: 0 1px 1px 1px $color-gold, 0 2px 2px 2px $color-gold,  0 3px 3px 3px $color-gold
     border-radius: 10px
     content: ""
     position: absolute
@@ -249,14 +251,15 @@ h1
     height: 100%
     width: 100%
     opacity: 0
-    transition: all 0.8s
+    transition: all 0.3s
 .card:hover::after
     opacity: 1
 .card:hover
+    webkit-transform: translateY(-3px)
+    transform: translateY(-3px)
     .card-title
         color: $color-white
     .serv-link
-        // color: $color-gray
         visibility: visible
 
 #cards-2, #cards-3
@@ -265,6 +268,11 @@ h1
 .third_section
     .main-text
         text-align: justify
+        margin: auto
+        
+    img
+        width: 300px
+        object-fit: contain
     .lic-link
             color: $color-white
             text-decoration: none

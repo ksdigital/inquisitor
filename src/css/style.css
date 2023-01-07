@@ -170,6 +170,7 @@ h1 {
   background-color: #e2c087;
   color: #040404;
   border-radius: 15px;
+  transition: all 0.3s;
 }
 
 .button:hover {
@@ -206,12 +207,15 @@ h1 {
 .right_wrapper i {
   font-size: 2.5rem;
 }
+.right_wrapper img {
+  width: 3.5rem;
+}
 
 .title_2 {
   font-size: 2rem;
   font-weight: light;
   color: rgba(255, 255, 255, 0.5490196078);
-  text-align: center;
+  text-align: start;
   margin: 0;
 }
 
@@ -279,7 +283,7 @@ h1 {
 
 .card::after {
   color: #040404;
-  border: 1px solid #e2c087;
+  box-shadow: 0 1px 1px 1px #e2c087, 0 2px 2px 2px #e2c087, 0 3px 3px 3px #e2c087;
   border-radius: 10px;
   content: "";
   position: absolute;
@@ -289,13 +293,17 @@ h1 {
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: all 0.8s;
+  transition: all 0.3s;
 }
 
 .card:hover::after {
   opacity: 1;
 }
 
+.card:hover {
+  webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
 .card:hover .card-title {
   color: #ffffff;
 }
@@ -309,6 +317,12 @@ h1 {
 
 .third_section .main-text {
   text-align: justify;
+  margin: auto;
+}
+.third_section img {
+  width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .third_section .lic-link {
   color: #ffffff;
