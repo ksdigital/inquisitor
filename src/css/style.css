@@ -46,7 +46,7 @@
 
 body {
   font-family: Stolzl;
-  background: url(../img/fon.jpg) center/cover no-repeat;
+  background: url(../img/fon.jpg) center no-repeat;
 }
 
 .container {
@@ -146,7 +146,8 @@ body {
 }
 
 .article_content_bg {
-  background: linear-gradient(rgba(4, 4, 4, 0.6), rgba(4, 4, 4, 0.8)), url(../img/main.jpg) left/cover no-repeat;
+  background: linear-gradient(rgba(4, 4, 4, 0.5), rgba(4, 4, 4, 0.7)), url(../img/main.jpg) right no-repeat;
+  background-size: auto 120%;
   position: relative;
 }
 
@@ -334,6 +335,27 @@ h1 {
   text-decoration: underline;
 }
 
+.fourth_section-form {
+  width: 40%;
+}
+.fourth_section-form .form-control {
+  background: none;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.fourth_section-form .form-control:active, .fourth_section-form .form-control:focus {
+  outline: rgba(226, 192, 135, 0.95) solid 0.1rem;
+  border: none;
+}
+.fourth_section-form .text-form {
+  color: #ffffff;
+}
+
+.form-bg {
+  background: linear-gradient(rgba(4, 4, 4, 0.8), rgba(4, 4, 4, 0.9)), url(../img/mes.jpg) right no-repeat;
+  background-size: auto 105%;
+}
+
 @media (max-width: 767.98px) {
   .main-header {
     margin-bottom: 3rem;
@@ -356,6 +378,9 @@ h1 {
   }
   .wrapper-contacts__icons-box {
     display: none;
+  }
+  .article_content_bg {
+    background: linear-gradient(rgba(4, 4, 4, 0.5), rgba(4, 4, 4, 0.7)), url(../img/main.jpg) left/cover no-repeat;
   }
 }
 @media (max-width: 575.98px) {
@@ -382,6 +407,9 @@ h1 {
   .tel_num {
     font-size: 0.8rem;
   }
+  .article_content_bg {
+    background: linear-gradient(rgba(4, 4, 4, 0.5), rgba(4, 4, 4, 0.7)), url(../img/main.jpg) left/cover no-repeat;
+  }
 }
 @media (max-width: 487px) {
   .main-header {
@@ -401,6 +429,9 @@ h1 {
   }
   .tel_icon {
     font-size: 0.5rem;
+  }
+  .article_content_bg {
+    background: linear-gradient(rgba(4, 4, 4, 0.5), rgba(4, 4, 4, 0.7)), url(../img/main.jpg) left/cover no-repeat;
   }
 }
 @media (max-width: 375px) {
@@ -431,5 +462,8 @@ h1 {
   }
   .tel_icon {
     font-size: 0.5rem;
+  }
+  .article_content_bg {
+    background: linear-gradient(rgba(4, 4, 4, 0.5), rgba(4, 4, 4, 0.7)), url(../img/main.jpg) left/cover no-repeat;
   }
 }/*# sourceMappingURL=style.css.map */
