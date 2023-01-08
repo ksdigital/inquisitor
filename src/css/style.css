@@ -148,7 +148,7 @@ body {
 }
 
 .article_content_bg {
-  background: linear-gradient(rgba(4, 4, 4, 0.5), rgba(4, 4, 4, 0.7)), url(../img/main.jpg) right no-repeat;
+  background: linear-gradient(rgba(4, 4, 4, 0.7), rgba(4, 4, 4, 0.9)), url(../img/main.jpg) right no-repeat;
   background-size: auto 120%;
   position: relative;
 }
@@ -354,7 +354,7 @@ h1 {
 }
 
 .form-bg {
-  background: linear-gradient(rgba(4, 4, 4, 0.8), rgba(4, 4, 4, 0.9)), url(../img/mes.jpg) right no-repeat;
+  background: linear-gradient(rgba(4, 4, 4, 0.9), rgba(4, 4, 4, 0.8)), url(../img/mes.jpg) right no-repeat;
   background-size: auto 105%;
 }
 
