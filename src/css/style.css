@@ -283,7 +283,7 @@ h1 {
 
 .card::after {
   color: #040404;
-  box-shadow: 0 1px 1px 1px #e2c087, 0 2px 2px 2px #e2c087, 0 3px 3px 3px #e2c087;
+  border: 2px solid #e2c087;
   border-radius: 10px;
   content: "";
   position: absolute;
@@ -301,8 +301,8 @@ h1 {
 }
 
 .card:hover {
-  webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
+  webkit-transform: translateY(-9px);
+  transform: translateY(-9px);
 }
 .card:hover .card-title {
   color: #ffffff;

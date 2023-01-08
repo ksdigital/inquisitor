@@ -15,3 +15,4 @@ function other() {
     document.getElementById("cards-2").setAttribute("style", "display: none");
     document.getElementById("cards-3").setAttribute("style", "display: flex");
 }
+
