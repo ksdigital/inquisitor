@@ -11,7 +11,32 @@
   outline: 0;
   outline: none;
 }
+.modern {
+  border-radius: 12px;
+  background: #4d5154 !important;
+  padding: .5rem !important;
+}
+.btn-group.modern>.btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: .25rem;
+}
+.btn-group.modern>.btn {
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5490196078);
+}
+.btn-group.modern>.btn:hover {
+  box-shadow: none;
+  color: #e2c087;
+  background: transparent;
 
+}
+.btn-group.modern>.btn-check:checked+.btn, .btn-group.modern>.btn-check:checked+.btn:hover {
+  background: #e2c087;
+  color: black;
+}
 @font-face {
   font-family: Stolzl;
   src: url("../fonts/Stolzl-Bold.ttf");
