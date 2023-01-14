@@ -11,32 +11,7 @@
   outline: 0;
   outline: none;
 }
-.modern {
-  border-radius: 12px;
-  background: #4d5154 !important;
-  padding: .5rem !important;
-}
-.btn-group.modern>.btn:not(:last-child):not(.dropdown-toggle) {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  margin-right: .25rem;
-}
-.btn-group.modern>.btn {
-  border: none;
-  border-radius: 10px;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.5490196078);
-}
-.btn-group.modern>.btn:hover {
-  box-shadow: none;
-  color: #e2c087;
-  background: transparent;
 
-}
-.btn-group.modern>.btn-check:checked+.btn, .btn-group.modern>.btn-check:checked+.btn:hover {
-  background: #e2c087;
-  color: black;
-}
 @font-face {
   font-family: Stolzl;
   src: url("../fonts/Stolzl-Bold.ttf");
@@ -71,9 +46,8 @@
 
 body {
   font-family: Stolzl;
-  background: url(../img/fon.jpg) center no-repeat;
+  background: url(../img/fon.jpg) no-repeat;
   width: 100%;
-  height: 100vh;
 }
 
 .container {
@@ -251,18 +225,35 @@ h1 {
   margin-bottom: 1.8rem;
 }
 
-.btn-group .btn {
-  color: #040404;
-  background: #e2c087;
+.modern {
+  border: 2px solid;
+  border-radius: 12px;
+  background: none !important;
+  padding: 0.3rem !important;
+}
+
+.btn-group.modern > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right: 0.3rem;
+}
+
+.btn-group.modern > .btn {
+  border: none;
   border-radius: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5490196078);
 }
-.btn-group .btn-3 {
-  margin: auto;
+
+.btn-group.modern > .btn:hover {
+  box-shadow: none;
+  color: #e2c087;
+  background: transparent;
 }
-.btn-group .btn:hover {
-  box-shadow: 0 0 5px 5px rgba(226, 192, 135, 0.45);
-  transition: all 0.3s;
-  background: #4d5154;
+
+.btn-group.modern > .btn-check:checked + .btn, .btn-group.modern > .btn-check:checked + .btn:hover {
+  background: #e2c087;
+  color: black;
 }
 
 .card {
@@ -348,7 +339,7 @@ h1 {
   margin: auto;
 }
 .third_section img {
-  width: 300px;
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -363,7 +354,7 @@ h1 {
 }
 
 .fourth_section-form {
-  width: 40%;
+  width: 50%;
 }
 .fourth_section-form .form-control {
   background: none;
@@ -381,6 +372,63 @@ h1 {
 .form-bg {
   background: linear-gradient(rgba(4, 4, 4, 0.9), rgba(4, 4, 4, 0.8)), url(../img/mes.jpg) right no-repeat;
   background-size: auto 105%;
+}
+
+.fifth_section {
+  margin-bottom: 6rem;
+}
+
+.accordion {
+  border-radius: 10px;
+  background: none;
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e2c087'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff8c'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.accordion .accordion-button {
+  color: #ffffff;
+  background: none;
+  border: none;
+}
+.accordion .accordion-item {
+  border: 0.01rem solid;
+  background: none;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.accordion .accordion-button:hover {
+  outline: rgba(226, 192, 135, 0.95) solid 0.1rem;
+  border: none;
+}
+
+.footer-content {
+  margin-bottom: 3rem;
+  justify-content: space-between;
+}
+.footer-content .wrapper-logo {
+  width: 35%;
+}
+.footer-content .wrapper-logo .ip {
+  text-align: center;
+}
+.footer-content .footer-logo {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer-content .footer-logo .logo {
+  height: 100%;
+}
+.footer-content .footer-logo .title_2 {
+  font-weight: bold;
+  width: 400px;
+  text-align: right;
+}
+.footer-content .footer-nav .link {
+  color: rgba(255, 255, 255, 0.5490196078);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.footer-content .footer-nav .link:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 @media (max-width: 767.98px) {
