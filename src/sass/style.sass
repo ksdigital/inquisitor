@@ -73,7 +73,10 @@ body
             color: $color-gray
             font-weight: light
     .logo
-        width: 50px
+        width: 7rem
+        height: 7rem
+        -webkit-filter: invert(100%)
+        filter: invert(100%)
 
 .nav-link:hover
     color: $color-gold
@@ -124,10 +127,11 @@ body
             color: $color-gold
 
 .article_content
-    height: 500px
+    height: 460px
 
 .article_content_bg
-    background: linear-gradient(rgba(04, 04, 04, 0.7), rgba(04, 04, 04, 0.9)), url(../img/main.jpg) right no-repeat
+    background: linear-gradient(rgba(04, 04, 04, 0.6), rgba(04, 04, 04, 0.8)), url(../img/main.jpg) right no-repeat
+    box-shadow: 0 0 8px 8px $color-black inset
     background-size: auto 120%
     position: relative
 
@@ -135,7 +139,7 @@ body
     font-size: 3rem
     font-weight: bold
     color: $color-white
-    padding: 1rem 0 0 1rem
+    padding-left: 1rem
     margin-bottom: 2.5rem
 
 h1
@@ -147,11 +151,18 @@ h1
 .button
     background-color: $color-gold
     color: $color-black
-    border-radius: 15px
+    // border: none
+    border-radius: 10px
     transition: all 0.3s
 
 .button:hover
-    box-shadow: 0 0 5px 5px rgba($color-gold, .45)
+    // box-shadow: 0 0 5px 5px rgba($color-gold, .45)
+    background: none
+    color: $color-white
+    border-color: $color-gold
+
+
+
 
 .item-text
     font-size: 1rem
@@ -162,7 +173,7 @@ h1
         font-weight: light
 
 .section
-    margin-bottom: 4.4rem
+    margin-bottom: 4rem
 
 .left_wrapper
     text-align: justify
@@ -182,7 +193,7 @@ h1
 
 .title_2
     font-size: 2rem
-    font-weight: light
+    font-weight: bold
     color: $color-gray
     text-align: start
     margin: 0
@@ -203,10 +214,11 @@ h1
 //         background: #4d5154
 
 .modern
-    border: 2px solid
-    border-radius: 12px
-    background: none !important
-    padding: .3rem !important
+    // border: 1px solid rgba($color-gold, .20)
+    border-radius: 10px
+    background: $color-gold !important
+    padding: 1px !important
+    transition: all 0.3s
 
 .btn-group.modern>.btn:not(:last-child):not(.dropdown-toggle) 
     border-top-right-radius: 10px
@@ -217,19 +229,19 @@ h1
     border: none
     border-radius: 10px
     background: transparent
-    color: rgba(255, 255, 255, 0.5490196078)
+    color: $color-black
 
 .btn-group.modern>.btn:hover
     box-shadow: none
-    color: #e2c087
+    color: $color-white
     background: transparent
 
 .btn-group.modern>.btn-check:checked+.btn, .btn-group.modern>.btn-check:checked+.btn:hover
-    background: #e2c087
-    color: black
+    background: $color-black
+    color: $color-white
 
 .card
-    background-color: $color-black
+    background: none
     text-align: center
     border: 1px solid
     position: relative
@@ -257,7 +269,7 @@ h1
         margin-bottom: 1rem
         visibility: hidden
     .serv-link:hover
-        color: $color-white
+        color: $color-gold
         text-decoration: underline
     .card-footer
         background: none
@@ -295,37 +307,58 @@ h1
     display: none
 
 .third_section
-    .main-text
-        text-align: justify
-        margin: auto
-        
-    img
-        width: 100%
-        object-fit: contain
+    margin-bottom: 7.5rem
+    .wrapper-content
+        width: 70%
+        .main-text
+            text-align: justify
+            // margin: auto
+    .wrapper-img
+        width: 40%
+        position: relative
+        img
+            width: 70%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            // height: 50%
+            // margin: auto
+            // object-fit: contain
     .lic-link
-            color: $color-white
+            color: $color-gray
             text-decoration: none
             margin-bottom: 1rem
     .lic-link:hover
         color: $color-gold
         text-decoration: underline
 
+.fourth_section-content
+    background: none
+
 .fourth_section-form
-    width: 50%
+    width: 60%
+    background: none
+
     .form-control
         background: none
-        color: $color-white
+        color: $color-gray
         border-color: rgba($color-gray, .20)
+        border-radius: 10px
 
     .form-control:active, .form-control:focus
         outline: rgba($color-gold, .95) solid .1rem
         border: none
     .text-form
-        color: $color-white
+        color: $color-gray
 
 .form-bg
     background: linear-gradient(rgba(04, 04, 04, 0.9), rgba(04, 04, 04, 0.8)), url(../img/mes.jpg) right no-repeat
-    background-size: auto 105%
+    // box-shadow: 0 0 4px 4px
+    // background: url(../img/mes.jpg) no-repeat
+    background-size: auto 100%
+    border: 1px solid rgba($color-gray, .20)
+    border-radius: 10px
 
 .fifth_section
     margin-bottom: 6rem
@@ -335,42 +368,66 @@ h1
     --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e2c087'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
     --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff8c'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
     .accordion-button
-        color: $color-white
+        color: $color-gray
         background: none
         border: none
+
     .accordion-item
-        border: .01rem solid
+        border: 1px solid rgba($color-gray, .20)
         background: none
-        border-color: rgba($color-gray, .20)
     .accordion-button:hover
-        outline: rgba($color-gold, .95) solid .1rem
+        color: $color-white
+        outline: rgba($color-gold, .95) solid .01rem
         border: none
+    .accordion-button:checked
+        color: $color-white
+
+
+.end
+    text-align: start
+    font-family: Stolzl
+
 
 .footer-content
     margin-bottom: 3rem
-    justify-content: space-between
+    background: none
+    // justify-content: space-between
     .wrapper-logo
-        width: 35%
-        .ip
-            text-align: center
+        // width: 35%
+        background: none
 
+        .ip
+            text-align: start
+            font-family: Stolzl
+            color: $color-gray
     .footer-logo
         justify-content: flex-start
         align-items: flex-start
+        background: none
+
         .logo
             height: 100%
+            -webkit-filter: invert(100%)
+            filter: invert(100%)
         .title_2
-            font-weight: bold
             width: 400px
-            text-align: right
+            text-align: start
+            color: $color-white
     .footer-nav
+        padding-left: 5rem
         .link
             color: $color-gray
             text-decoration: none
             margin-bottom: 1rem
         .link:hover
-            color: $color-white
+            color: $color-gold
             text-decoration: underline
+    .wrapper-contacts
+        background: none
+        padding-left: 5rem
+
+    // .icons
+    //     justify-content: flex-start
 
 
 
