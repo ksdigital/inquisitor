@@ -11,7 +11,6 @@
         outline: 0
         outline: none
 
-
 @font-face 
     font-family: Stolzl
     src: url('../fonts/Stolzl-Bold.ttf')
@@ -62,7 +61,7 @@ $color-gray: #ffffff8c
 
 body
     font-family: Stolzl
-    background: url(../img/fon.jpg) no-repeat
+    background: url(../img/fon.jpg) repeat
     width: 100%
 
 .container
@@ -72,59 +71,61 @@ body
     margin-bottom: 4.4rem
     background: none
 
-
 .navbar
     padding: 0
     display: flex
     justify-content: center
     background: none
-
-
 .navbar_content
     background: none
     display: flex
     justify-content: space-between
-    .name
-        margin-right: 1rem
-        white-space: normal
-        .name_info
-            font-size: 13px
-            color: $color-gray
-            font-weight: light
+    .nav-wrapper-content
+        display: flex
+        flex-direction: row
+        justify-content: center
+        .wrapper-contacts
+            background: none
+            text-align: center
+            vertical-align: middle
+            display: flex
+            flex-direction: column
+            align-items: center
+        .name
+            margin-right: 1rem
+            white-space: normal
+            .name_info
+                font-size: 13px
+                color: $color-gray
+                font-weight: light
     .logo
         width: 7rem
         height: 7rem
         -webkit-filter: invert(100%)
         filter: invert(100%)
-
+.tel_num
+    color: $color-gray
+    text-decoration: none
+.tel_num:hover
+    color: $color-gold
+    text-decoration: underline
+.tel_icon
+    color: $color-gold
 .nav-link:hover
     color: $color-gold
 
 .dropdown-menu
-    background: $color-white
-    color: $color-gray
-    
+    background: none
+    border: 1px solid $color-gray
+    border-radius: 10px
+    a
+        color: $color-gray
 .dropdown-item:active
     background: $color-gray
     color: $color-gray
-
 .dropdown-item:hover
-    background: $color-gold
-
-.wrapper-contacts
     background: none
-    text-align: center
-    vertical-align: middle
-    display: flex
-    flex-direction: column
-    .tel_num
-        color: $color-gray
-        text-decoration: none
-    .tel_num:hover
-        color: $color-gold
-        text-decoration: underline
-    .tel_icon
-        color: $color-gold
+    color: $color-gold
 
 .icons
     display: inline-flex
@@ -158,9 +159,13 @@ body
     font-size: 3rem
     font-weight: bold
     color: $color-white
-    padding-left: 1rem
     margin-bottom: 2.5rem
-
+.title_2
+    font-size: 2rem
+    font-weight: bold
+    color: $color-gray
+    text-align: start
+    margin: 0
 h1
     width: 70%
 
@@ -170,18 +175,15 @@ h1
 .button
     background-color: $color-gold
     color: $color-black
-    // border: none
     border-radius: 10px
     transition: all 0.3s
-
 .button:hover
     // box-shadow: 0 0 5px 5px rgba($color-gold, .45)
     background: none
     color: $color-white
     border-color: $color-gold
-
-
-
+.btn-dark
+    --bs-btn-active-bg: #ffffff8c
 
 .item-text
     font-size: 1rem
@@ -194,43 +196,35 @@ h1
 .section
     margin-bottom: 4rem
 
-.left_wrapper
-    text-align: justify
-
-.right_wrapper
-    .item
+.first_section
+    .first_section-content
         display: flex
-        align-items: center
-    span
-        font-size: 3rem
-    p
-        margin-bottom: .8rem
-    i
-        font-size: 2.5rem
-    img
-        width: 3.5rem
-
-.title_2
-    font-size: 2rem
-    font-weight: bold
-    color: $color-gray
-    text-align: start
-    margin: 0
+        flex-direction: row
+        .left_wrapper
+            text-align: justify
+        .right_wrapper
+            .item
+                display: flex
+                align-items: center
+            span
+                font-size: 3rem
+            p
+                margin-bottom: .8rem
+            i
+                font-size: 2.5rem
+            img
+                width: 3.5rem
 
 .second_section-title
     margin-bottom: 1.8rem
 
-// .btn-group
-//     .btn
-//         color: $color-black
-//         background: $color-gold
-//         border-radius: 10px
-//     .btn-3
-//         margin: auto
-//     .btn:hover
-//         box-shadow: 0 0 5px 5px rgba($color-gold, .45)
-//         transition: all 0.3s
-//         background: #4d5154
+.btn-group
+    margin: 0
+    padding: 0
+    .btn
+        margin: auto
+        padding: .8rem
+        line-height: 1
 
 .modern
     // border: 1px solid rgba($color-gold, .20)
@@ -268,13 +262,17 @@ h1
     transition: all 0.8s
     height: 100%
     border-radius: 10px
-    padding-bottom: 1rem
+    padding: 1rem 0 1rem 0
+    // padding-bottom: 1rem
+    // padding-top: 1rem
+    .card-header
+        padding: 0 .5rem 0 .5rem
     .card-title
         color: $color-gray
-        font-size: 1.25rem
+        font-size: 1rem
         font-weight: light
         text-align: center
-        padding: .5rem
+        padding-bottom: 1rem
         border: none
         background: none
         margin: auto
@@ -293,6 +291,7 @@ h1
     .card-footer
         background: none
         border: none
+        padding: 0
         .button
             border-radius: 7px
 
@@ -339,7 +338,7 @@ h1
             width: 70%
             position: absolute
             top: 50%
-            left: 50%
+            left: 35%
             transform: translate(-50%, -50%)
             // height: 50%
             // margin: auto
@@ -354,23 +353,22 @@ h1
 
 .fourth_section-content
     background: none
-
 .fourth_section-form
     width: 60%
     background: none
-
     .form-control
         background: none
         color: $color-gray
         border-color: rgba($color-gray, .20)
         border-radius: 10px
-
     .form-control:active, .form-control:focus
         outline: rgba($color-gold, .95) solid .1rem
         border: none
     .text-form
         color: $color-gray
-
+    .form-control:hover
+        outline: rgba($color-gold, .95) solid .1rem
+        border: none
 .form-bg
     background: linear-gradient(rgba(04, 04, 04, 0.9), rgba(04, 04, 04, 0.8)), url(../img/mes.jpg) right no-repeat
     // box-shadow: 0 0 4px 4px
@@ -379,8 +377,6 @@ h1
     border: 1px solid rgba($color-gray, .20)
     border-radius: 10px
 
-.fifth_section
-    margin-bottom: 6rem
 .accordion
     border-radius: 10px
     background: none
@@ -390,7 +386,6 @@ h1
         color: $color-gray
         background: none
         border: none
-
     .accordion-item
         border: 1px solid rgba($color-gray, .20)
         background: none
@@ -401,37 +396,24 @@ h1
     .accordion-button:checked
         color: $color-white
 
-
-.end
-    text-align: start
-    font-family: Stolzl
-
-
 .footer-content
-    margin-bottom: 3rem
     background: none
-    // justify-content: space-between
     .wrapper-logo
-        // width: 35%
         background: none
-
-        .ip
-            text-align: start
-            font-family: Stolzl
-            color: $color-gray
-    .footer-logo
-        justify-content: flex-start
-        align-items: flex-start
-        background: none
-
-        .logo
-            height: 100%
-            -webkit-filter: invert(100%)
-            filter: invert(100%)
-        .title_2
-            width: 400px
-            text-align: start
-            color: $color-white
+        display: flex
+        flex-direction: column
+        .footer-logo
+            justify-content: flex-start
+            align-items: flex-start
+            background: none
+            .logo
+                -webkit-filter: invert(100%)
+                filter: invert(100%)
+            .title_2
+                color: $color-white
+            .log
+                height: 10rem
+                background: none
     .footer-nav
         padding-left: 5rem
         .link
@@ -445,86 +427,212 @@ h1
         background: none
         padding-left: 5rem
 
-    // .icons
-    //     justify-content: flex-start
+.end
+    text-align: start
+    font-family: Stolzl
+    color: $color-gray
 
+@media (max-width: 1200px)
+    .footer-content
+        .wrapper-contacts
+            .address
+                text-align: start
+                // font-size: .93rem
+        .footer-nav
+            padding-left: 5.5rem
 
-
-@media (max-width: 767.98px)
-    .main-header
-        margin-bottom: 3rem
-    .navbar_burger
-        margin-right: .4rem
-    .name
-        margin-top: 1rem
-        font-size: 1rem
-        .name_1, .name_2
-            display: block
-    .name_info
-        display: none
-    .tel_num
-        font-size: .80rem
-    .wrapper-contacts__icons-box
-        display: none
+@media (max-width: 992px)
+    .navbar_content
+        .logo
+            height: 90px
+            width: 90px
+        .wrapper-contacts__icons-box
+            display: none
+    .article_content
+        height: 480px
+    .footer-content
+        .wrapper-logo
+            height: 100%
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            margin-left: 3rem
+            .ip
+                display: none
+                margin: auto
+    .fourth_section-form
+        width: 100%
+    .first_section
+        .first_section-content
+            display: flex
+            flex-direction: column
+            .left_wrapper
+                margin-bottom: 3rem
+    .third_section
+        margin-bottom: 4rem
+        .wrapper-img
+            img
+                top: 35%
     .article_content_bg
         background: linear-gradient(rgba(04, 04, 04, 0.5), rgba(04, 04, 04, 0.7)), url(../img/main.jpg) left/cover no-repeat
+
+@media (max-width: 767.98px)
+    .navbar
+        .navbar_content
+            .logo
+                height: 90px
+                width: 90px
+            .main-header
+                margin-bottom: 3rem
+            .name
+                margin-top: 1rem
+                margin-right: .9rem
+                font-size: .9rem
+                .name_1, .name_2
+                    display: block
+            .name_info
+                display: none
+            .tel_num
+                font-size: .9rem
+            .wrapper-contacts__icons-box
+                display: none
+    .article_content
+        .title
+            width: 100%
+        .article_content-text
+            width: 80%
+        .quote
+            display: none
+    .second_section
+        .button_group
+            .btn-group
+                .btn
+                    font-size: 15px
+    .third_section
+        .wrapper-content
+            width: 100%
+        .wrapper-img
+            display: none
+    .footer-content
+        .wrapper-logo
+            margin: 0
+        .footer-nav
+            padding-left: 2rem
+        .wrapper-contacts
+            padding-left: 3rem
 
 @media (max-width: 575.98px)
     .main-header
-        margin-bottom: 3rem
-    .navbar_burger
-        margin-right: .4rem
-    .navbar_content
-        padding: 0
-    .name
-        margin-top: 1rem
-        font-size: 1rem
-        padding: 0
-        .name_1, .name_2
-            display: block
-    .name_info
-        display: none
-    .tel_num
-        font-size: .80rem
-    .article_content_bg
-        background: linear-gradient(rgba(04, 04, 04, 0.5), rgba(04, 04, 04, 0.7)), url(../img/main.jpg) left/cover no-repeat
-
-@media (max-width: 487px)
-    .main-header
         margin-bottom: 2rem
-    .navbar_burger
-        margin-right: .4rem
-    .name
-        font-size: .75rem
-        .name_1, .name_2
-            display: block
-    .tel_num
-        font-size: .65rem
-    .tel_icon
-        font-size: .5rem
-    .article_content_bg
-        background: linear-gradient(rgba(04, 04, 04, 0.5), rgba(04, 04, 04, 0.7)), url(../img/main.jpg) left/cover no-repeat
+        .navbar
+            flex-direction: column
+            .navbar_content
+                padding: 0
+            .navbar_burger
+                margin-right: 2rem
+            .nav-wrapper-content
+                flex-direction: column
+                .name
+                    margin: auto
+                    padding: 0
+                    .name_1, .name_2
+                        display: inline
+                    .name_info
+                        display: none
+                .wrapper-contacts
+                    padding: 0
+    .article_content
+        .article_content-text
+            width: 100%
+            text-align: justify
+        .main-items
+            flex-direction: column !important
+            width: 100%
+            .item
+                margin-bottom: .4rem
+    .end
+        font-size: .875rem
+    .card-group
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        .card
+            width: 45vw
+    .footer-content
+        flex-direction: row !important
+        .footer-nav
+            flex-direction: row !important
+            justify-content: space-around
+            padding: 0 0 0 1rem
+            flex-wrap: wrap
+            margin-bottom: 2rem
+            .link
+                margin-right: .5rem
 
-@media (max-width: 375px)
+@media (max-width: 496.98px)
+    .btn
+        font-size: 1rem
+    .main-text
+        font-size: 15px
+    .title
+        font-size: 2.5rem
+    .title_2
+        font-size: 1.5rem
+    .main-header
+        .navbar
+            .navbar_burger
+                // margin-right: rem
+            .navbar_content
+            .nav-wrapper-content
+                .name
+                    .name_2
+                        display: none
+    .card-group
+        .card
+            padding: .5rem 0 .5rem 0
+            width: 93vw
+            .card-title
+                font-size: 15px
+                padding-bottom: .5rem
+            .card-text, .serv-link
+                font-size: 15px
+                margin-bottom: .5rem
+            .card-footer
+                .button
+                    font-size: 0.875rem
+    .second_section
+        .button_group
+            .btn-group
+                .btn
+                    font-size: 0.875rem
+    .footer-content
+        .footer-nav
+            font-size: .875rem
+        .wrapper-contacts
+            .tel
+                .tel_num
+                    font-size: .875rem
+
+@media (max-width: 374.98px)
+    .section, .third_section
+        margin-bottom: 3rem
     .main-header
         margin-bottom: 1rem
-    .navbar_burger
-        margin-right: .4rem
-    .navbar
-        display: flex
-        flex-wrap: wrap
-        justify-content: flex-start
-    .logo
-        width: 40px
-    .name
-        width: 90px
-        margin-top: .5rem
-        font-size: .8rem
-        .name_1, .name_2
-            display: block
-    .tel_num
-        font-size: .65rem
-    .tel_icon
-        font-size: .5rem
-    .article_content_bg
-        background: linear-gradient(rgba(04, 04, 04, 0.5), rgba(04, 04, 04, 0.7)), url(../img/main.jpg) left/cover no-repeat
+        .navbar
+            .navbar_burger
+                margin-right: .5rem
+            .navbar_content
+                .logo
+                    height: 65px
+                    width: 65px
+    .card
+        width: 90vw
+    .footer-content
+        .wrapper-logo
+            .footer-logo
+                padding-left: 1rem
+                margin-bottom: 2rem
+                .logo
+                    .log
+                        width: 90px
+                        height: 90px
