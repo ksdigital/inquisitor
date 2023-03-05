@@ -42,3 +42,24 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+// Модальное окно услуг
+const winModal = document.getElementById('winModal')
+winModal.addEventListener('show.bs.modal', event => {
+    // Кнопка, которая активировала модальное окно
+    const button = event.relatedTarget
+    // Извлечение информации из атрибутов data-bs-*
+    const recipient = button.getAttribute('data-bs-whatever')
+
+    // Обновление содержимого модального окна.
+    const modalTitle = winModal.querySelector('.modal-title')
+    const modalBodyTextarea = winModal.querySelector('.modal-body textarea')
+
+    modalTitle.textContent = `${recipient}`
+    modalBodyTextarea.value = recipient
+})
+
+
+document.getElementById("btn-service").onclick = function () {
+    document.getElementById("connection").scrollIntoView({behavior: "smooth"});
+}

@@ -207,6 +207,20 @@ body {
   position: relative;
 }
 
+.licenses_content_bg {
+  background: linear-gradient(rgba(4, 4, 4, 0.6), rgba(4, 4, 4, 0.8)), url(../img/1.png) right no-repeat;
+  box-shadow: 0 0 8px 8px #040404 inset;
+  background-size: auto 100%;
+  position: relative;
+}
+
+.contacts_content_bg {
+  background: linear-gradient(rgba(4, 4, 4, 0.6), rgba(4, 4, 4, 0.8)), url(../img/contacts.png) left no-repeat;
+  box-shadow: 0 0 8px 8px #040404 inset;
+  background-size: auto 150%;
+  position: relative;
+}
+
 .service-1_content_bg {
   background: linear-gradient(rgba(4, 4, 4, 0.4), rgba(4, 4, 4, 0.6)), url(../img/services.jpg) left no-repeat;
   box-shadow: 0 0 8px 8px #040404 inset;
@@ -467,6 +481,39 @@ h1 {
   align-items: center;
 }
 
+.modal-content, .modal-header {
+  background: #040404;
+  border-color: rgba(226, 192, 135, 0.6);
+}
+.modal-content .modal-body, .modal-header .modal-body {
+  padding: 1rem 1rem 0 1rem;
+}
+.modal-content .modal-body .col-form-label, .modal-header .modal-body .col-form-label {
+  padding-top: 0;
+}
+.modal-content .modal-header, .modal-header .modal-header {
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+}
+.modal-content .modal-footer, .modal-header .modal-footer {
+  padding: 0 1rem 1rem 1rem;
+  border: none;
+  justify-content: flex-start;
+}
+.modal-content .modal-footer .btn-modal-close, .modal-header .modal-footer .btn-modal-close {
+  background: rgba(255, 255, 255, 0.5490196078);
+}
+.modal-content .form-control, .modal-header .form-control {
+  background: none;
+  color: rgba(255, 255, 255, 0.5490196078);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+.modal-content .form-control:focus, .modal-header .form-control:focus {
+  outline: rgba(226, 192, 135, 0.95) solid 0.01rem;
+  border: none;
+}
+
 .fourth_section-content {
   background: none;
 }
@@ -571,6 +618,9 @@ h1 {
 }
 
 @media (max-width: 1200px) {
+  .contacts_content iframe {
+    width: 100%;
+  }
   .footer-content .wrapper-logo .footer-logo .logo .log {
     width: 150px;
     height: 150px;
@@ -621,6 +671,26 @@ h1 {
   }
   .services_content_bg {
     background: linear-gradient(rgba(4, 4, 4, 0.4), rgba(4, 4, 4, 0.6)), url(../img/services.jpg) left/cover no-repeat;
+  }
+  .service_article_content {
+    height: 100%;
+    flex-direction: column;
+  }
+  .service_article_content .article_right-wrapper .button {
+    position: relative !important;
+  }
+  .licenses_content-img {
+    flex-direction: column !important;
+  }
+  .licenses_content-img img {
+    padding-bottom: 1rem;
+    width: 100% !important;
+  }
+  .licenses_content_bg {
+    background: none;
+  }
+  .contacts_content {
+    flex-direction: column !important;
   }
 }
 @media (max-width: 767.98px) {
@@ -779,6 +849,9 @@ h1 {
     font-size: 0.875rem;
   }
   .second_section .button_group .btn-group .btn {
+    font-size: 0.875rem;
+  }
+  .second_section .contacts_content .tel .tel_num {
     font-size: 0.875rem;
   }
   .footer-content .footer-nav {

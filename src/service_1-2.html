@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inqusitor - Детективное агентство</title>
+    <title>Inqusitor - Сбор сведений по уголовным делам</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -111,7 +111,7 @@
                             </ul>
                         </li>
                         <li class="nav-item me-lg-2">
-                            <a  target="_blank" class="nav-link" href="contacts.html">Контакты</a>
+                            <a target="_blank" class="nav-link" href="contacts.html">Контакты</a>
                         </li>
                         <li class="nav-item me-lg-2">
                             <a target="_blank" class="nav-link" href="licenses.html">Лицензии</a>
@@ -129,223 +129,130 @@
         type="button"class="btn btn-dark btn-floating btn-lg btn-scroll" id="btn-back-to-top"><i class="fas fa-arrow-up"></i>
         </button>
         <article class="container section">
-            <section class="second_section container section">
-                <div class="second_section-title services_content container ps-3 pe-3 services_content_bg">
-                    <h1 class="title mb-5" id="services">Наши <span class="gold">услуги</span>
+            <div class="service_article_content container service-1_content_bg section d-flex">
+                <div class="article_right-wrapper container">
+                    <h1 class="title pt-2 ps-3 pe-3 h1_service" id="service-1">
+                        Cбор сведений по <span class="gold">уголовным делам</span>
                     </h1>
-                    <p class="main-text services_content-text">
-                        Наше агентство предоставляет качественные детективные услуги по всей территории РФ и стран СНГ <span> с гарантией результата и сроков по договору</span>
-                    </p>
-                    <a type="button" href="#connection" class="button btn btn-dark btn-lg position-relative">Заказать услугу</a>
-                </div>
+                    <p class="main-text ps-3">Стоимость услуги<span class="white"> от 25 000 руб.</span></p>
+                    <a type="button" class="button btn btn-dark btn-lg ms-3 mb-5 position-absolute bottom-0 start-0" data-bs-toggle="modal" data-bs-target="#winModal" data-bs-whatever="Cбор сведений по уголовным делам">Заказать услугу</a>
 
-                <div class="second_section_cards container ps-3 pe-3">
-                    <h2 class="title mb-4" id="individuals">Для физических лиц</h2>
-                    <div class="card-group row g-3 g-lg-4 g-md-4 g-sm-4 animate__animated animate__fadeIn mb-5" id="cards-1">
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Cбор сведений по гражданским делам
+                    <div class="modal fade" id="winModal" tabindex="-1" aria-labelledby="winModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content main-text">
+                                <div class="modal-header">
+                                    <h3 class="modal-title fs-5" id="winModalLabel">Новое сообщение</h3>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                                 </div>
-                                <div class="card-text main-text">от 15 000 руб.</div>
-                                <a target="_blank" rel="noopener noreferrer" href="service_1.html#service-1" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Ваше Имя</label>
+                                            <input type="text" class="form-control shadow-none" id="" placeholder="Имя клиента">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Адрес электронной почты:</label>
+                                            <input type="email" class="form-control shadow-none" id="" placeholder="name@example.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Телефон</label>
+                                            <input type="tel" class="form-control shadow-none" id="" placeholder="8-999-999-99-99">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="recipient-name" class="col-form-label">Заказать услугу / Ваше сообщение</label>
+                                            <textarea type="text" class="form-control shadow-none" id="recipient-name"></textarea>
+                                        </div>
+                                        <!-- <div class="mb-3">
+                                            <label for="message-text" class="col-form-label">Ваше сообщение детективу:</label>
+                                            <textarea class="form-control shadow-none" id="message-text"></textarea>
+                                        </div> -->
+                                    </form>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Cбор сведений по уголовным делам
-                                </div>
-                                <div class="card-text main-text">от 25 000 руб.</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Поиск без вести пропавших граждан
-                                </div>
-                                <div class="card-text main-text">от 15 000 руб.</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Поиск имущества
-                                </div>
-                                <div class="card-text main-text">от 15 000 руб.</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Выяснение данных о гражданах
-                                </div>
-                                <div class="card-text main-text">от 5 000 руб.</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Поиск должников
-                                </div>
-                                <div class="card-text main-text">цена договорная</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Поиск детей по исполнительному документу
-                                </div>
-                                <div class="card-text main-text">от 40 000 руб.</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Наружное наблюдение
-                                </div>
-                                <div class="card-text main-text">2 000 руб./час</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Сбор информации о человеке
-                                </div>
-                                <div class="card-text main-text">2 500 руб./час</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Наведение справок
-                                </div>
-                                <div class="card-text main-text">2 000 руб./час</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Изучение предметов и документов
-                                </div>
-                                <div class="card-text main-text">2 000 руб./час</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Работа с должниками
-                                </div>
-                                <div class="card-text main-text">цена договорная</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="button btn btn-dark">Заказать</button>
+                                    <button type="button" class="button btn btn-modal-close btn-dark" data-bs-dismiss="modal">Закрыть</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <h2 class="title mb-4" id="legal">Для юридических лиц</h2>
-                    <div class="card-group row g-3 g-lg-4 g-md-4 g-sm-4 animate__animated animate__fadeIn d-flex mb-5" id="cards-2" >
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Сбор данных и информации
-                                </div>
-                                <div class="card-text main-text">от 25 000 руб.</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
+                </div>
+                <div class="article_left-wrapper container ps-3">
+                    <div>
+                        <p class="main-text pe-3 pt-4 item lh-2"><i class="fa-regular fa-circle-check gold me-3"></i>Получение объяснений от свидетелей и иных участников уголовного судопроизводства, истребование сведений из учреждений и организаций путем направления запросов, получение необходимых документов и предметов, имеющих отношение к делу</p>
+                    </div>
+                    <div>
+                        <p class="main-text pe-3 item lh-2"><i class="fa-regular fa-circle-check gold me-3"></i>Фиксирование юридически значимых фактов или событий, путем производств наружных осмотров и обследований зданий, сооружений и иных объектов, в том числе путем фотографирования либо видеосъемки</p>
+                    </div>
+                    <div>
+                        <p class="main-text pe-3 item lh-2"><i class="fa-regular fa-circle-check gold me-3"></i>Сбор информации для отвода специалиста, эксперта либо иного участника уголовного судопроизводства, при наличии к тому предпосылок</p>
+                    </div>
+                    <div>
+                        <p class="main-text pe-3 item lh-2"><i class="fa-regular fa-circle-check gold me-3"></i>Согласование и подготовка проектов вопросов для постановки их перед экспертами в рамках уголовного судопроизводства, согласование и выбор экспертного учреждения</p>
+                    </div>
+                    <div>
+                        <p class="main-text pe-3 item lh-2"><i class="fa-regular fa-circle-check gold me-3"></i>Поиск свидетелей и очевидцев совершенного преступления</p>
+                    </div>
+                    <div>
+                        <p class="main-text pe-3 item lh-2"><i class="fa-regular fa-circle-check gold me-3"></i>Проверка алиби и показаний участников уголовного процесса</p>
+                    </div>
+                    <div>
+                        <p class="main-text pe-3 item lh-2"><i class="fa-regular fa-circle-check gold me-3"></i>Розыск подозреваемых, обвиняемых в рамках расследования уголовного дела, в том числе объявленных в федеральный и международные розыски</p>
+                    </div>
+                    <div>
+                        <p class="main-text pe-3 item lh-2"><i class="fa-regular fa-circle-check gold me-3"></i>Получение необходимых документов, письменных и иных предметов, имеющих значение для уголовного дела, в том числе видеозаписей, для последующего приобщения их к материалам уголовного дела</p>
+                    </div>
+                </div>
+            </div>
+            <section class="first_section container section">
+                    <h2 class="title ps-3 pe-3" id="about-us">
+                        Наши преимущества
+                    </h2>
+                <div class="first_section-content">
+                    <div class="right_wrapper container d-flex row justify-content-start">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p class="main-text ps-3 pe-3 item lh-2"><img class="pe-3" src="icons/Group.png" alt="">лет опыта оперативной и следственной работы сотрудников</p>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Проверка контрагентов
-                                </div>
-                                <div class="card-text main-text">цена договорная</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-magnifying-glass pe-3 gold"></i>Владение оперативной обстановкой</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-folder-open pe-3 gold"></i>Обширные информационные источники</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-landmark pe-3 gold"></i>Взаимодействие с правоохранительными органами</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-phone-volume pe-3 gold"></i>Круглосуточное поддержание связи с клиентом</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-user-secret pe-3 gold"></i>Гарантия конфиденциальности</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-gears pe-3 gold"></i>Нестандартные методики расследования</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                            <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-regular fa-hourglass-half pe-3 gold"></i>Кратчайшие сроки выполнения работ</p>
                         </div>
                     </div>
-                    <h2 class="title mb-4"  id="other">Прочие</h2>
-                    <div class="card-group row g-3 g-lg-4 g-md-4 g-sm-4  animate__animated animate__fadeIn d-flex mb-5" id="cards-3">
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Проверка объекта недвижимости
-                                </div>
-                                <div class="card-text main-text">от 5 000 руб.</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Юридическая консультация
-                                </div>
-                                <div class="card-text main-text">цена договорная</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Физическое сопровождение имущества и лиц
-                                </div>
-                                <div class="card-text main-text">цена договорная</div>
-                                <a target="_blank" rel="noopener noreferrer" href="#" class="serv-link">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Заказать услугу</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-6 col">
-                            <div class="card">
-                                <div class="card-header card-title">Иные услуги
-                                </div>
-                                <div class="card-text main-text">запишитесь <br> на консультацию</div>
-                                <a href="#" class="serv-link invisible">Подробнее...</a>
-                                <div class="card-footer">
-                                    <button type="button" class="button btn btn-dark btn-sm">Записаться</button>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+            </section>
+
+            <section class="second_section container section">
+                <h2 class="title ps-3 pe-3">
+                    Этапы работы
+                </h2>
+                <div class="service_third_section-content container pe-3 d-flex row flex-column justify-content-start">
+                    <div>
+                        <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-1 pe-3 gold number"></i>Личная встреча, обсуждение вопроса/проблемы</p>
+                    </div>
+                    <div>
+                        <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-2 pe-3 gold number"></i>Заключение договора (индивидуальные условия для каждого)</p>
+                    </div>
+                    <div>
+                        <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-3 pe-3 gold number"></i>Мы приступаем к работе. Информируем вас о промежуточных результатах</p>
+                    </div>
+                    <div>
+                        <p class="main-text ps-3 pe-3 item lh-2"><i class="fa-solid fa-4 pe-3 gold number"></i>Предоставление отчета о проделанной работе</p>
                     </div>
                 </div>
             </section>
