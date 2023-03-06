@@ -207,13 +207,6 @@ body {
   position: relative;
 }
 
-.licenses_content_bg {
-  background: linear-gradient(rgba(4, 4, 4, 0.6), rgba(4, 4, 4, 0.8)), url(../img/1.png) right no-repeat;
-  box-shadow: 0 0 8px 8px #040404 inset;
-  background-size: auto 100%;
-  position: relative;
-}
-
 .contacts_content_bg {
   background: linear-gradient(rgba(4, 4, 4, 0.6), rgba(4, 4, 4, 0.8)), url(../img/contacts.png) left no-repeat;
   box-shadow: 0 0 8px 8px #040404 inset;
