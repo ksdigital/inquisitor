@@ -50,6 +50,29 @@ $color-gray: #ffffff8c
     background: none
     border: 1px solid $color-gold
 
+#btn-whatsapp
+    display: none
+
+.whatsapp-item
+    width: 48px
+    height: 48px
+    background-color: $color-black
+    border: none
+    border: 1px solid $color-gold
+    border-radius: 100px
+    a
+        width: 47px
+        height: 47px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-decoration: none
+        padding: 0
+        margin: 0
+    i
+        font-size: 1.75rem
+        color: $color-gold
+        padding-bottom: 2px
 
 .gold
     color: $color-gold
@@ -208,6 +231,9 @@ body
 h1
     width: 70%
 
+h2
+    padding-top: 1rem
+
 .h1_service
     width: 100%
 
@@ -236,7 +262,7 @@ h1
         font-weight: light
 
 .section
-    margin-bottom: 4rem
+    margin-bottom: 3rem
 
 .first_section
     .first_section-content
@@ -427,8 +453,6 @@ h1
         outline: rgba($color-gold, .95) solid .01rem
         border: none
 
-
-
 .fourth_section-content
     background: none
 .fourth_section-form
@@ -473,6 +497,34 @@ h1
         border: none
     .accordion-button:checked
         color: $color-white
+
+.message
+    background-color: $color-black
+    border: 1px solid red
+    border-radius: 10px
+    text-align: center
+    position: fixed
+    z-index: 15
+    bottom: 0px
+    display: none
+    animation: ani 1s forwards
+    transition: all 0.3s
+
+#snackOk, #snackOkMod
+    border: 1px solid $color-gold
+
+@keyframes ani 
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(-35%)
+
+.alert-form
+    font-size: .6rem
+    color: red
+    font-family: Stolzl
+    padding: 1px
+    visibility: hidden
 
 .footer-content
     background: none
@@ -539,7 +591,7 @@ h1
         .wrapper-contacts__icons-box
             display: none
     .article_content
-        height: 480px
+        height: 550px
     .footer-content
         .footer-nav
             padding-left: 1.5rem
@@ -583,6 +635,12 @@ h1
         background: none
     .contacts_content
         flex-direction: column !important
+    #btn-whatsapp
+        display: block
+        position: fixed
+        bottom: 7rem
+        right: 2rem
+        z-index: 10
 
 @media (max-width: 767.98px)
     .navbar
@@ -607,6 +665,7 @@ h1
     .services_content-text
         width: 80%
     .article_content
+        height: 480px
         .title
             width: 100%
         .article_content-text

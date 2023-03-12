@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inqusitor - Поиск должников</title>
+    <meta name="discription" content="Качественные детективные услуги по всей территории РФ и стран СНГ с гарантией результата и сроков по договору">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -128,6 +129,9 @@
         <button
         type="button"class="btn btn-dark btn-floating btn-lg btn-scroll" id="btn-back-to-top"><i class="fas fa-arrow-up"></i>
         </button>
+        <button type="button" class="whatsapp-item p-0 m-0" id="btn-whatsapp">
+            <a target="_blank" href="https://wa.me/79190468238?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%92%D0%B0%D1%81%20%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82%D1%81%D1%82%D0%B2%D1%83%D0%B5%D1%82%20%D0%B4%D0%B5%D1%82%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%BE%20Inquisitor!%20%D0%9D%D0%B0%D1%88%D0%B5%20%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%BE%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%20%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B4%D0%B5%D1%82%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B5%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8%20%D1%81%20%D0%B3%D0%B0%D1%80%D0%B0%D0%BD%D1%82%D0%B8%D0%B5%D0%B9%20%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D0%B0%20%D0%BF%D0%BE%20%D0%B2%D1%81%D0%B5%D0%B9%20%D1%82%D0%B5%D1%80%D1%80%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B8%20%D0%A0%D0%A4%20%D0%B8%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%20%D0%A1%D0%9D%D0%93."><i class="fa-brands fa-whatsapp"></i></a>
+        </button>
         <article class="container section">
             <div class="service_article_content container section d-flex">
                 <div class="article_right-wrapper container">
@@ -138,40 +142,55 @@
                     <a type="button" class="button btn btn-dark btn-lg ms-3 mb-5 " data-bs-toggle="modal" data-bs-target="#winModal" data-bs-whatever="Поиск должников">Заказать услугу</a>
 
                     <div class="modal fade" id="winModal" tabindex="-1" aria-labelledby="winModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog d-flex justify-content-center">
                             <div class="modal-content main-text">
                                 <div class="modal-header">
                                     <h3 class="modal-title fs-5" id="winModalLabel">Новое сообщение</h3>
                                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
+                                    <form id="formMod">
                                         <div class="mb-3">
                                             <label for="message-text" class="col-form-label">Ваше Имя</label>
-                                            <input type="text" class="form-control shadow-none" id="" placeholder="Имя клиента">
+                                            <input type="text" class="form-control shadow-none" id="nameMod" placeholder="Имя клиента">
                                         </div>
-                                        <div class="mb-3">
+                                        <div class="">
                                             <label for="message-text" class="col-form-label">Адрес электронной почты:</label>
-                                            <input type="email" class="form-control shadow-none" id="" placeholder="name@example.com">
+                                            <input type="email" class="form-control shadow-none" id="emailMod" placeholder="name@example.com">
                                         </div>
-                                        <div class="mb-3">
+
+                                        <div class="alert-form" id="alert-emailMod">
+                                            Некорректный формат email
+                                        </div>
+
+                                        <div class="">
                                             <label for="message-text" class="col-form-label">Телефон</label>
-                                            <input type="tel" class="form-control shadow-none" id="" placeholder="8-999-999-99-99">
+                                            <input type="tel" class="form-control shadow-none" id="phoneMod" placeholder="8-999-999-99-99">
                                         </div>
+
+                                        <div class="alert-form" id="alert-phoneMod">
+                                            Некорректный формат телефона
+                                        </div>
+
                                         <div class="mb-3">
                                             <label for="recipient-name" class="col-form-label">Заказать услугу / Ваше сообщение</label>
-                                            <textarea type="text" class="form-control shadow-none" id="recipient-name"></textarea>
+                                            <textarea type="text" class="form-control shadow-none" id="messageMod"></textarea>
                                         </div>
-                                        <!-- <div class="mb-3">
-                                            <label for="message-text" class="col-form-label">Ваше сообщение детективу:</label>
-                                            <textarea class="form-control shadow-none" id="message-text"></textarea>
-                                        </div> -->
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="button btn btn-dark">Заказать</button>
+                                    <button type="button" class="button btn btn-dark" id="btn-actionMod">Заказать</button>
                                     <button type="button" class="button btn btn-modal-close btn-dark" data-bs-dismiss="modal">Закрыть</button>
                                 </div>
+                            </div>
+                            <div class="message main-text p-4" id="snackAlertMod">
+                                <span class="white">Заполните</span> поля "Адрес электронной почты" и "Телефон"
+                            </div>
+                            <div class="message main-text p-4" id="snackOkMod">
+                                <span class="white">Спасибо за заявку!</span> Мы свяжемся с Вами в ближайщее время.
+                            </div>
+                            <div class="message main-text p-4" id="snackErrMod">
+                                <span class="white">Произошла ошибка</span> передачи данных! Повторите запрос.
                             </div>
                         </div>
                     </div>
@@ -240,27 +259,42 @@
                 <h2 class="title ps-3 pe-3" id="connection">
                     Оставить заявку
                 </h2>
-                <div class="wrapper-content container ps-3 pe-3">
+                <div class="wrapper-content container ps-3 pe-3 d-flex justify-content-center">
                     <div class="fourth_section-content form-bg container p-lg-3 p-mb-3">
                         <div class="fourth_section-form p-4">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control shadow-none" id="floatingInputGroup1" placeholder="Имя клиента">
-                                <label class="text-form main-text" for="floatingInputGroup1">Ваше Имя</label>
+                                <input type="text" class="form-control shadow-none" id="name" placeholder="Имя клиента">
+                                <label class="text-form main-text" for="name">Ваше Имя</label>
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control shadow-none" id="floatingInput" placeholder="name@example.com">
-                                <label class="text-form main-text" for="floatingInput">Адрес электронной почты</label>
+                            <div class="form-floating">
+                                <input type="email" class="form-control shadow-none" id="email" placeholder="name@example.com">
+                                <label class="text-form main-text" for="email">Адрес электронной почты</label>
                             </div>
-                            <div class="form-floating mb-3">
-                                <input type="tel" class="form-control shadow-none" id="floatingInput" placeholder="Телефон">
-                                <label class="text-form main-text" for="floatingInput">Телефон</label>
+                            <div class="alert-form" id="alert-email">
+                                Некорректный формат email
+                            </div>
+                            <div class="form-floating ">
+                                <input type="tel" class="form-control shadow-none" id="phone" placeholder="Телефон">
+                                <label class="text-form main-text" for="phone">Телефон</label>
+                            </div>
+                            <div class="alert-form" id="alert-phone">
+                                Некорректный формат телефона
                             </div>
                             <div class="form-floating mb-5">
-                                <textarea class="form-control shadow-none" placeholder="Сообщение" id="floatingTextarea2" style="height: 100px"></textarea>
-                                <label class="text-form main-text" for="floatingTextarea2">Ваше сообщение детективу</label>
+                                <textarea class="form-control shadow-none pb-0" placeholder="Сообщение" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <label class="text-form main-text pb-0" for="floatingTextarea2">Ваше сообщение детективу</label>
                             </div>
-                            <button type="submit" class="button btn btn-dark btn-lg position-relative">Отправить</button>
+                            <button type="submit" class="button btn btn-dark btn-lg position-relative" id="btn-action" onClick="">Отправить</button>
                         </div>
+                    </div>
+                    <div class="message main-text p-4" id="snackAlert">
+                        <span class="white">Заполните</span> поля "Адрес электронной почты" и "Телефон"
+                    </div>
+                    <div class="message main-text p-4" id="snackOk">
+                        <span class="white">Спасибо за заявку!</span> Мы свяжемся с Вами в ближайщее время.
+                    </div>
+                    <div class="message main-text p-4" id="snackErr">
+                        <span class="white">Произошла ошибка</span> передачи данных! Повторите запрос.
                     </div>
                 </div>
             </section>
@@ -304,8 +338,8 @@
                     <div class="tel d-flex flex-column align-items-start">
                         <a class="tel_num mb-lg-3 mb-md-3 mb-sm-1 mb-1" href="tel:+79190468238"><i class="fa-solid fa-phone tel_icon  me-lg-3 me-md-3 me-sm-3 me-1"></i>Михаил +7 (919) 046-82-38</a>
                         <a class="tel_num mb-lg-3 mb-md-3 mb-sm-1 mb-1" href="tel:+79156342946"><i class="fa-solid fa-phone tel_icon me-lg-3 me-md-3 me-sm-3 me-1"></i>Дмитрий +7 (915) 634-29-46</a>
-                        <!-- <a class="tel_num mb-lg-3 mb-md-3 mb-sm-1 mb-1" href="tel:+79999999999"><i class="fa-solid fa-phone tel_icon  me-lg-3 me-md-3 me-sm-3 me-1"></i>+7(999)-999-99-99</a> -->
                         <a class="tel_num address align-items-start  mb-lg-3 mb-md-3 mb-sm-1 mb-1" target="_blank" rel="noopener noreferrer" href="https://yandex.ru/maps/?pt=32.052734, 54.782448&z=18&l=map"><i class="fa-solid fa-location-dot gold me-lg-3 me-md-3 me-sm-3 me-1"></i> Смоленск, ул. Большая Советская, д. 18</a>
+                        <a class="tel_num mb-lg-3 mb-md-3 mb-sm-1 mb-1" href="mailto:inquisitordetective@mail.ru"><i class="fa-solid fa-envelope tel_icon  me-lg-3 me-md-3 me-sm-3 me-1"></i>inquisitordetective@mail.ru</a>
                     </div>
                     <!-- иконки -->
                     <div class="wrapper-contacts__icons-box icons justify-content-center">
@@ -327,7 +361,7 @@
         </div>
         <hr class="white pe-3">
         <div class="container d-flex flex-row justify-content-start align-items-center">
-            <p class="p-0 end">© 2023 Все права защищены <br>Cайт поддерживается KSDigital.ru</p>
+            <p class="p-0 end">© 2023 Все права защищены <br>Powered by KSDigital.ru</p>
         </div>
 
     </footer>
