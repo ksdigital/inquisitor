@@ -165,25 +165,11 @@ function sendRequest() {
                 document.getElementById("btn-action").removeAttribute('disabled');
             }
         })
+        .catch(err => {
+            showSnack('snackErr', '', 3000)
+            document.getElementById("btn-action").removeAttribute('disabled');
+        })
 }
-    // var xhr = new XMLHttpRequest();
-    // xhr.open('POST', 'http://playground.ksdigital.ru/api/mailer', true);
-
-    // xhr.onloadend = function() {
-    //     if (xhr.status == 200) {
-    //         console.log("Успех");
-    //         showSnack('snackOk', '', 3000)
-    //     } else {
-    //         console.log("Ошибка " + xhr.status);
-    //         showSnack('snackErr', '', 3000)
-
-    //         // произошла ошибка передачи данных повторите запрос
-    //     }
-    // }
-
-    // xhr.send(data);
-    // clearValues();
-// }
 
 function clearValues() {
     (document.getElementById('email')).value = '';
@@ -223,7 +209,8 @@ function ValidPhoneMod() {
     }
     return re.test(myPhone);
 }
-document.getElementById("btn-actionMod").onclick = function () {
+const sendModal = document.getElementById("btn-actionMod")
+sendModal ? sendModal.onclick = function () {
     if (document.getElementById("emailMod").value === "") {
         showSnack('snackAlertMod', '', 3000)
     } else if (document.getElementById("phoneMod").value === "") {
@@ -243,7 +230,8 @@ document.getElementById("btn-actionMod").onclick = function () {
             sendRequestMod();
         }
     }
-}
+} : {};
+
 function sendRequestMod() {
     document.getElementById("btn-actionMod").setAttribute('disabled', '');
     let email = document.getElementById('emailMod').value;
@@ -281,6 +269,10 @@ function sendRequestMod() {
                 showSnack('snackErrMod', '', 3000)
                 document.getElementById("btn-actionMod").removeAttribute('disabled');
             }
+        })
+        .catch(err => {
+            showSnack('snackErrMod', '', 3000)
+            document.getElementById("btn-actionMod").removeAttribute('disabled');
         })
 }
 function clearValuesMod() {
