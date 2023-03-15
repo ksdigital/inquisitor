@@ -140,11 +140,11 @@ function sendRequest() {
     data.append('phone', phone);
     data.append('message', message);
 
-    fetch('http://playground.ksdigital.ru/api/inquisitor/mailer', {
+    fetch('https://playground.ksdigital.ru/api/inquisitor/mailer', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Accept': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: JSON.stringify({
           email, phone, message, name
@@ -170,6 +170,7 @@ function sendRequest() {
             document.getElementById("btn-action").removeAttribute('disabled');
         })
 }
+
 
 function clearValues() {
     (document.getElementById('email')).value = '';
@@ -245,11 +246,11 @@ function sendRequestMod() {
     data.append('phoneMod', phone);
     data.append('messageMod', message);
 
-    fetch('http://playground.ksdigital.ru/api/inquisitor/mailer', {
+    fetch('https://playground.ksdigital.ru/api/inquisitor/mailer', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+          'Accept': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: JSON.stringify({
           email, phone, message, name
