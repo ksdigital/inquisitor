@@ -113,6 +113,10 @@ body {
   justify-content: center;
   background: none;
 }
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+}
 
 .navbar_content {
   background: none;
@@ -233,6 +237,11 @@ body {
   box-shadow: 0 0 8px 8px #040404 inset;
   background-size: auto 110%;
   position: relative;
+}
+
+.license {
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .contacts_content_bg {
@@ -686,8 +695,8 @@ h2 {
 }
 @media (max-width: 992px) {
   .navbar_content .logo {
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
   }
   .navbar_content .wrapper-contacts__icons-box {
     display: none;
