@@ -19,10 +19,7 @@ function other() {
     document.getElementById("cards-3").setAttribute("style", "display: flex");
 }
 
-//забираем кнопку "наверх"
 let mybutton = document.getElementById("btn-back-to-top");
-
-//задание функции: показать кнопку когда прокрутка ниже 20px от верха документа
 // создание функции прокрутки
 window.onscroll = function () {
     scrollFunction();
@@ -58,15 +55,10 @@ setTimeout(() => {
 // Модальное окно услуг
 const winModal = document.getElementById('winModal')
 winModal?.addEventListener('show.bs.modal', event => {
-    // Кнопка, которая активировала модальное окно
     const button = event.relatedTarget
-    // Извлечение информации из атрибутов data-bs-*
     const recipient = button.getAttribute('data-bs-whatever')
-
-    // Обновление содержимого модального окна.
     const modalTitle = winModal.querySelector('.modal-title')
     const modalBodyTextarea = winModal.querySelector('.modal-body textarea')
-
     modalTitle.textContent = `${recipient}`
     modalBodyTextarea.value = recipient
 })
@@ -150,16 +142,13 @@ function sendRequest() {
           email, phone, message, name
         })
     })
-        // .then(response => response.json())
         .then(response => {
             if (response.status == 200) {
                 console.log("Успех");
-                //=== очищай форму и snackOk
                 clearValues();
                 showSnack('snackOk', '', 3000)
                 document.getElementById("btn-action").removeAttribute('disabled');
             } else {
-                //=== snack об ошибке
                 console.log("Ошибка " + response.status);
                 showSnack('snackErr', '', 3000)
                 document.getElementById("btn-action").removeAttribute('disabled');
@@ -256,16 +245,13 @@ function sendRequestMod() {
           email, phone, message, name
         })
     })
-        // .then(response => response.json())
         .then(response => {
             if (response.status == 200) {
                 console.log("Успех");
-                //=== очищай форму и snackOk
                 clearValuesMod();
                 showSnackMod('snackOkMod', '', 3000)
                 document.getElementById("btn-actionMod").removeAttribute('disabled');
             } else {
-                //=== snack об ошибке
                 console.log("Ошибка " + response.status);
                 showSnack('snackErrMod', '', 3000)
                 document.getElementById("btn-actionMod").removeAttribute('disabled');
