@@ -684,6 +684,10 @@ h2 {
   margin: 0 0 0.7rem 0;
 }
 
+.mapa {
+  border-radius: 10px;
+}
+
 @media (max-width: 1200px) {
   .contacts_content iframe {
     width: 100%;
